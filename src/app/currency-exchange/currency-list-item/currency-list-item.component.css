@@ -1,0 +1,26 @@
+li {
+
+  justify-content: space-between;
+
+  color: black;
+  text-align: center;
+ font-size: 20px;
+
+
+  border-radius: 8px;
+  max-width: 360px;
+  min-height: 60px;
+  margin: 0 auto 16px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 8px;
+  background-color: #e0e6f2;
+  opacity: 0.9 ;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+li:focus {
+  outline: none;
+  border: 1px solid #fff;
+}
+

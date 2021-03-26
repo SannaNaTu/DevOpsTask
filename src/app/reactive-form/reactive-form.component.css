@@ -1,0 +1,23 @@
+.conteiner{
+  background-color: #e0e6f2;
+  opacity: 0.9 ;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  margin: auto;
+
+
+  text-align: center;
+
+  margin-top: 30px;
+  border-radius: 5px;
+  height: auto;
+  width: 25%;
+  padding: 15px 18px;
+  font-family: 'Roboto';
+}
+.full-width-field {
+  width: 100%;
+}
+.btn{
+  background-color: #d6dba1;
+}

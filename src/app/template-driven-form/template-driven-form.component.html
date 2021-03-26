@@ -1,0 +1,161 @@
+<div class="container">
+  <form #f="ngForm" (ngSubmit)="onSubmit()">
+    <h1>Registration Form</h1>
+    <div class="form-group">
+      <label for="firstName">Etunimi</label>
+      <input
+        type="text"
+        class="form-control"
+        id="firstName"
+        [(ngModel)]="person.firstName"
+
+        name="firstName"
+        #firstName="ngModel"
+        required minlength="2"
+        pattern="^[a-zA-Z ]*$"
+      >
+    </div>
+    <div
+      *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)">
+      <p *ngIf="firstName.hasError('required')">Enter your first name</p>
+      <p *ngIf="firstName.hasError('minlength')">Minimum 2 charcacters required</p>
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Sukunimi</label>
+      <input
+        type="text"
+        class="form-control"
+        id="lastName"
+        [(ngModel)]="person.lastName"
+
+        name="lastName"
+        #lastName="ngModel"
+        required minlength="2"
+        pattern="^[a-zA-Z ]*$"
+      >
+    </div>
+    <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)">
+      <p *ngIf="lastName.hasError('required')">Enter your last name</p>
+      <p *ngIf="lastName.hasError('minlength')">Minimum 2 charcacters required</p>
+    </div>
+    <div class="form-group">
+      <label for="personId">ID</label>
+      <input
+        type="text"
+        class="form-control"
+        id="personId"
+        [(ngModel)]="person.personId"
+
+        name="personId"
+        #personId="ngModel"
+        required minlength="6"
+        pattern="^(0[1-9]|[12]\d|3[01])(0[1-9]|1[0-2])([5-9]\d\+|\d\d-|[01]\dA)\d{3}[\dA-Z]$"
+      >
+    </div>
+    <div *ngIf="personId.invalid && (personId.dirty || personId.touched)">
+      <p *ngIf="personId.hasError('required')">Enter your ID</p>
+      <p *ngIf="personId.hasError('minlength')">Minimum 6 charcacters required</p>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="text"
+        class="form-control"
+        id="email"
+        [(ngModel)]="person.email"
+
+        name="email"
+        #email="ngModel"
+        required minlength="6"
+        pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+      >
+    </div>
+    <div *ngIf="email.invalid && (email.dirty || email.touched)">
+      <p *ngIf="email.hasError('required')">Enter your email</p>
+      <p *ngIf="email.hasError('minlength')">Minimum 6 charcacters required</p>
+    </div>
+    <div class="form-group">
+      <label for="userName">Käyttäjätunnus</label>
+      <input
+        type="text"
+        class="form-control"
+        id="userName"
+        [(ngModel)]="person.userName"
+
+        name="userName"
+        #userName="ngModel"
+        required minlength="6"
+
+      >
+    </div>
+    <div *ngIf="userName.invalid && (userName.dirty || userName.touched)">
+      <p *ngIf="userName.hasError('required')">Enter your username</p>
+      <p *ngIf="userName.hasError('minlength')">Minimum 6 charcacters required</p>
+    </div>
+    <div class="form-group">
+      <label for="passWord">Salasana</label>
+      <input
+        type="password"
+        class="form-control"
+        id="passWord"
+        [(ngModel)]="person.passWord"
+
+        name="passWord"
+        #passWord="ngModel"
+        required minlength="8"
+        pattern="(?=^.{10,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+      >
+    </div>
+    <div *ngIf="passWord.invalid && (passWord.dirty || passWord.touched)">
+      <p *ngIf="passWord.hasError('required')">Enter your password</p>
+      <p *ngIf="passWord.hasError('minlength')">UpperCase, LowerCase, Number/SpecialChar and min 8 Chars</p>
+    </div>
+    <div class="form-group">
+      <label for="confirmPassword">Vahvista salasana</label>
+      <input
+        type="password"
+        class="form-control"
+        id="confirmPassword"
+        [(ngModel)]="person.confirmPassword"
+
+        name="confirmPassword"
+        #confirmPassword="ngModel"
+        required minlength="8"
+        pattern="{{passWord.value}}"
+      >
+    </div>
+    <div *ngIf="confirmPassword.invalid && (confirmPassword.dirty || confirmPassword.touched)">
+      <p *ngIf="confirmPassword.hasError('required')">ReEnter your password</p>
+      <p *ngIf="confirmPassword.hasError('minlength')">Passwords doens't macth!</p>
+    </div>
+    <div>
+
+
+      <input style="margin-left: 20px"
+
+             type="checkbox"
+             class="form-check-input"
+             id="termsAndConditions"
+             [(ngModel)]="person.termsAndConditions"
+             name="termsAndConditions"
+             #termsAndConditions="ngModel"
+             required
+      >
+      <label style="margin-left: 50px" for="termsAndConditions">Ehdot? </label>
+    </div>
+    <div
+      *ngIf="termsAndConditions.invalid && termsAndConditions.touched">
+      <p *ngIf="termsAndConditions.hasError('required')">Tap the Checkbox</p>
+    </div>
+    <div>
+      <div class="form-group">
+
+        <button type="submit" class="btn" [disabled]="!f.valid">Submit</button>
+
+        <button type="reset" class="btn">Reset</button>
+
+      </div>
+    </div>
+  </form>
+</div>

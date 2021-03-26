@@ -1,0 +1,89 @@
+<div class="conteiner">
+  <h3>Registration Form:</h3>
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+    <mat-form-field class="field-full-width">
+      <input matInput
+             placeholder="firstName"
+             formControlName="firstName">
+      <mat-error *ngIf="firstName.hasError('required')">Enter your first name</mat-error>
+      <mat-error *ngIf="firstName.hasError('minlength')">Minimun 2 charaters</mat-error>
+    </mat-form-field>
+
+
+    <mat-form-field class="field-full-width">
+      <input matInput
+
+             formControlName="lastName"
+             placeholder="lastName">
+      <mat-error *ngIf="lastName.hasError('required')">Enter last name</mat-error>
+      <mat-error *ngIf="lastName.hasError('minlength')">Minumum 2 characters</mat-error>
+    </mat-form-field>
+
+
+    <mat-form-field class="field-full-width">
+      <input matInput
+
+             formControlName="personId"
+             placeholder="personId">
+      <mat-error *ngIf="personId.hasError('required')">Enter your ID</mat-error>
+      <mat-error *ngIf="personId.hasError('minlength')">Minimun 6 charaters</mat-error>
+      <mat-error *ngIf="personId.hasError('pattern')">Not real ID</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="field-full-width">
+      <input matInput
+             formControlName="eMail"
+             placeholder="eMail">
+      <mat-error *ngIf="eMail.hasError('required')">Enter your email</mat-error>
+      <mat-error *ngIf="eMail.hasError('minlength')">Minimun 2 charaters</mat-error>
+      <mat-error *ngIf="eMail.hasError('email')">Not real Email</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="field-full-width">
+      <input matInput
+             formControlName="userName"
+             placeholder="userName">
+      <mat-error *ngIf="userName.hasError('required')">Enter your user name</mat-error>
+      <mat-error *ngIf="userName.hasError('minlength')">Minimun 6 charaters</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="field-full-width">
+      <input matInput
+             type="password"
+             formControlName="passWord"
+             placeholder="passWord">
+      <mat-error *ngIf="passWord.hasError('required')">Enter password</mat-error>
+      <mat-error *ngIf="passWord.hasError('minlength')">Minimun 10 charaters</mat-error>
+      <mat-error *ngIf="passWord.hasError('pattern')">At least 1 UpperCase, LowerCase, Number or SpecialChar</mat-error>
+    </mat-form-field>
+
+
+    <mat-form-field class="field-full-width">
+
+      <input matInput
+             type="password"
+             placeholder="confirmPassWord"
+             formControlName="confirmPassWord"
+             pattern="{{passWord.value}}">
+      <mat-error *ngIf="confirmPassWord.hasError('required')">ReEnter password</mat-error>
+      <mat-error *ngIf="confirmPassWord.hasError('minlength')">Minumum 10 characters</mat-error>
+      <mat-error *ngIf="confirmPassWord.hasError('pattern')">Passwords not match</mat-error>
+
+    </mat-form-field>
+    <div>
+      <mat-checkbox
+        formControlName="termsAndConditions">
+
+        Accept terms and conditions
+
+      </mat-checkbox>
+<!--              <mat-error *ngIf="termsAndConditions.invalid && termsAndConditions.touched">Accept terms and conditions</mat-error>-->
+    </div>
+    <div>
+      <button mat-raised-button type="submit" class="btn" [disabled]="!profileForm.valid">Submit</button>
+
+    </div>
+
+  </form>
+</div>

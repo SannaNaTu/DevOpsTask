@@ -1,0 +1,32 @@
+h1 {
+
+  text-transform: uppercase;
+
+  padding-top: 24px;
+  text-align: center;
+  margin-top:50px;margin-bottom: 50px;
+  text-decoration: underline;
+
+}
+
+.wrapper {
+  position: center;
+  min-height: 100%;
+
+}
+
+.output-container {
+  position: relative;
+  margin-top: 64px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.54);
+  font-weight: 400;
+  text-align: right;
+  height: 20px;
+}
+

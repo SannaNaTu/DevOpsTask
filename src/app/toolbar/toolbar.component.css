@@ -1,0 +1,22 @@
+
+.mat-toolbar{
+  background-color: #fcfdf8;
+}
+
+.menu{
+  margin: 10px;
+  padding: 10px;
+  font-family:Arial;
+
+
+}
+.mat-menu-content {
+
+}
+a {
+  color: black;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+

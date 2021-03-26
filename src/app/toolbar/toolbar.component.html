@@ -1,0 +1,36 @@
+<mat-toolbar>
+  <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  Front End/ Angular
+  <span class="spacer"></span>
+  <a mat-button routerLink="/login">Login</a>
+  <a mat-button routerLink="/logout">Logout</a>
+</mat-toolbar>
+<mat-menu #menu="matMenu">
+
+  <div class="menu">
+    <a routerLink="/calculator" routerLinkActive="active">Calculator</a>
+  </div>
+  <div class="menu">
+    <a routerLink="feedback" routerLinkActive="active">Feedback</a>
+  </div>
+  <!--  <div>-->
+  <!--    <a routerLink="form" routerLinkActive="active">Form</a>-->
+  <!--  </div>-->
+  <div class="menu">
+  <a routerLink="reactiveform" routerLinkActive="active">Reactive Form</a>
+</div>
+  <div class="menu">
+    <a routerLink="finnkino" routerLinkActive="active">Finnkino</a>
+  </div>
+  <div class="menu">
+    <a routerLink="templateDrivenForm" routerLinkActive="active">Template Driven Form</a>
+  </div>
+  <div class="menu">
+    <a routerLink="currencyExchange" routerLinkActive="active">Currency Exchange</a>
+  </div>
+  <div class="menu">
+    <a routerLink="login" routerLinkActive="active">Admin login</a>
+  </div>
+</mat-menu>

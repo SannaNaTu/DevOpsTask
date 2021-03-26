@@ -1,0 +1,34 @@
+
+.error{
+  color: red;
+}
+
+.success{
+  color: green;
+}
+.container {
+  background-color: #e0e6f2;
+  opacity: 0.9;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 5px;
+  height: auto;
+  width: 20%;
+  padding: 15px 18px;
+  font-size: 15px;
+  font-family: 'Roboto';
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn{
+  background-color: #aed581;
+  border-radius: 5px;
+  margin:5px;
+}
+
+.testi{
+  text-align: center;
+  margin-left:17%;
+  width: 100%;
+}
+

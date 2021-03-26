@@ -1,0 +1,44 @@
+
+
+.money {
+  margin-top: 80px;
+  position: relative;
+  font-size: 35px;
+}
+
+.money-container {
+  text-align: center;
+
+}
+
+
+.error-message {
+  color: white;
+  border-radius: 5px;
+  padding: 20px;
+  min-height: 60px;
+
+}
+
+
+input {
+  width: 50vw;
+  max-width: 360px;
+  font-weight: 100;
+  text-align: center;
+
+  color: black;
+  /* border: none; */
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 8px;
+  background-color: #e0e6f2;
+  opacity: 0.9 ;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #fff;
+}
+

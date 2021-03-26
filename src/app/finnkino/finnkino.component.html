@@ -1,0 +1,41 @@
+<h1 style="text-align: center;margin-top:50px;margin-bottom: 50px;text-decoration: underline">FINNKINO UUTISET:</h1>
+<div class="srcbox">
+  <mat-form-field>
+
+    <mat-label>Tietty uutinen?</mat-label>
+    <input
+      matInput placeholder="Search"
+
+      [(ngModel)]="searchText">
+
+
+  </mat-form-field>
+</div>
+
+
+<div class="col-xl-7 " style="margin-left: 20%">
+
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let item of cinemaData$ | async  | finnkino:searchText ">
+
+      <mat-expansion-panel-header>
+        <mat-panel-title>{{item.PublishDate | date:'dd.MM.yyyy'}}  </mat-panel-title>
+        <mat-panel-description>{{item.Title}}</mat-panel-description>
+      </mat-expansion-panel-header>
+
+
+      <mat-panel-description>
+
+        <div class=column></div>
+
+        <img src='{{item.ImageURL}}'>
+
+        <div class=column style="margin-left: 15px"></div>
+        {{item.HTMLLead}}
+
+      </mat-panel-description>
+
+
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

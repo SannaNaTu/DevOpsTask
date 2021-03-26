@@ -1,0 +1,28 @@
+.container{
+
+  max-width: 20%;
+  margin: auto;
+  background: #c5d4f1;
+
+  border: 12px solid #808ba9;
+  border-radius: 10px;
+  margin-top: 180px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.buttonCalculator{
+  background-color:#808ba9;
+
+
+
+}
+.result{
+  width: 80%;
+  height:60%;
+  margin: auto;
+  border: 2px solid #808ba9;
+  border-radius: 5px;
+  padding: 5px;
+}
+
