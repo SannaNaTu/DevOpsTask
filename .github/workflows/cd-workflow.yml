@@ -16,7 +16,7 @@ jobs:
       - uses: actions/upload-artifact@master
         with:
           name: webpack artifacts
-          path: dist/DevOpsTask/
+          path: dist/devopstask/
   
   Build-and-Push-Docker-Image:
     runs-on: ubuntu-latest
@@ -30,11 +30,11 @@ jobs:
         uses: actions/download-artifact@main
         with:
           name: webpack artifacts
-          path: dist/DevOpsTask
+          path: dist/devopstask
       - uses: akhileshns/heroku-deploy@v3.10.9
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "DevOpsTask"
+          heroku_app_name: "devopstask"
           heroku_email: "korhonsm@gmail.com"
           remote_branch: master 
           usedocker: true
